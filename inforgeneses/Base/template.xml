@@ -1,0 +1,25 @@
+<template format="4"
+		revision="1"
+		name="Base"
+		description="Cria as classes base do MVP - BaseActivity, BasePresenter e BaseContract">
+
+	<category value="Inforgeneses"/>
+	<formfactor value="Mobile"/>
+
+	<parameter id="activityName"
+		type="string"
+		constraints="class|unique|nonempty"
+		default="Base"
+        visibility="false"/>
+
+	 <parameter
+        id="packName"
+        type="string"
+        constraints="nonempty|unique"
+        default="base"
+        visibility="false"/>
+
+	<globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>

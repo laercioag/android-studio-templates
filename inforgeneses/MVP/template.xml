@@ -1,0 +1,38 @@
+<template format="4"
+		revision="1"
+		name="MVP"
+		description="Cria as classes MVP - Activity, Presenter e Contract">
+
+	<category value="Inforgeneses"/>
+	<formfactor value="Mobile"/>
+
+	<parameter id="activityName"
+		name="Nome da Funcionalidade MVP"
+		type="string"
+		constraints="class|unique|nonempty"
+		default="NovaFuncionalidade"
+		help="Nome da funcionalidade MVP. Exemplo: ListarAlunos"/>
+
+	 <parameter
+        id="packName"
+        name="Nome do Pacote"
+        type="string"
+        constraints="nonempty|unique"
+        default="novafuncionalidade"
+        visibility="false"
+        suggest="${activityName?lower_case}"
+        help="Nome do pacote da funcionalidade" />
+
+	<parameter
+        id="activityLayoutName"
+        name="Nome do Layout da Activity"
+        type="string"
+        default="activity_nova_funcionalidade"
+        constraints="layout|nonempty|unique"
+        suggest="activity_${classToResource(activityName)}"
+        help="Nome do layout da Activity a ser criada. Exemplo: activity_listar_alunos" />
+
+	<globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
