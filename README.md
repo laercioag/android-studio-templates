@@ -1,4 +1,4 @@
-# Android Studio Templates [Inforgeneses]
+# Android Studio Templates
 
 ## Instalação
 
