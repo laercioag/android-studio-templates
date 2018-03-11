@@ -3,7 +3,7 @@
 		name="Base"
 		description="Cria as classes base do MVP - BaseActivity, BasePresenter e BaseContract">
 
-	<category value="Inforgeneses"/>
+	<category value="MVP Templates"/>
 	<formfactor value="Mobile"/>
 
 	<parameter id="activityName"
